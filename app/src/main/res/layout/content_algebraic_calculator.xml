@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AlgebraicCalculator"
+    tools:showIn="@layout/activity_algebraic_calculator"
+    android:background="@android:color/black">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:id="@+id/am_search_bar"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:textAlignment="center"
+            android:textColor="#ffffffff"
+            android:id="@+id/equation"
+            android:hint="Enter Problem"
+            android:background="@drawable/white_border"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:onClick="solveEquation"
+            android:text="Solve"
+            android:background="@drawable/dark_cyan_background_nc"
+            android:textColor="#ffffffff"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintTop_toBottomOf="@id/am_search_bar"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="24sp"
+        android:textColor="#ffffffff"
+        android:id="@+id/calc_output"
+        />
+</android.support.constraint.ConstraintLayout>

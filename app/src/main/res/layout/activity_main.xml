@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Warning: "
+        android:background="#fa6e6e"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:id="@+id/warning"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/weather_event"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Weather"
+        app:layout_constraintTop_toBottomOf="@id/warning"
+        android:textSize="15sp"
+        android:onClick="switchToWeather"/>
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:id="@+id/newsEvent"
+    android:text="News"
+    app:layout_constraintTop_toBottomOf="@id/weather_event"
+    android:textSize="15sp"
+    android:onClick="switchToNews"
+    />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/calcEvent"
+        android:text="Algebraic Calculator"
+        app:layout_constraintTop_toBottomOf="@id/newsEvent"
+        android:textSize="15sp"
+        android:onClick="switchToCalc"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/chemEvent"
+        android:text="Chemistry Tools"
+        app:layout_constraintTop_toBottomOf="@id/calcEvent"
+        android:textSize="15sp"
+        android:onClick="switchToChem"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/weather_link"
+        app:layout_constraintTop_toBottomOf="@id/chemEvent"
+        android:textSize="15sp"
+        />
+</android.support.constraint.ConstraintLayout>
